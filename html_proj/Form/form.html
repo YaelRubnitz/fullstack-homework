@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <form>
+            <fieldset>
+                <legend> Personal Information </legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Full Name" required minlength="2" aria-describedby="name-hint">
+                <small id="name-hint">Must be at least 2 characters long.</small>
+                <label for="email">Email:</label>
+                <input type = "email" id="email" name="email" placeholder="Email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{10}">
+            </fieldset>
+
+            <fieldset>
+                <legend> Ticket & Workshops</legend>
+                <label for="ticket">Ticket Type:</label>
+                <select id = "ticket" name="ticket" required>
+                    <option value="Standard">Standard</option>
+                    <option value="VIP">VIP</option>
+                    <option value="Student">Student</option>
+                </select>
+                <label>
+                    <input type="checkbox" name="workshop" value="performance"> Web Performance
+                </label>
+                <label>
+                    <input type="checkbox" name="workshop" value="accessibility"> Accessibility
+                </label>
+                <label>
+                    <input type="checkbox" name="workshop" value="testing"> Testing
+                </label>
+                <label>
+                    <input type = "radio" name= "diet" value = "None" required> 
+                    None
+                </label>
+                  
+                <label>
+                    <input type = "radio" name= "diet" value = "Vegan"> 
+                    Vegan
+                </label>
+                  
+                <label>
+                    <input type = "radio" name= "diet" value = "Kosher"> 
+                    Kosher
+                </label>
+                  
+                <label>
+                    <input type = "radio" name= "diet" value = "Halal"> 
+                    Halal
+                </label>
+                  
+                <label>
+                    <input type = "radio" name= "diet" value = "Other"> 
+                    Other
+                    <input type="text" name="otherDiet" placeholder="Please specify">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend> Payment Details</legend>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" required pattern="[0-9, ]{13,19}">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="month" id="expiryDate" name="expiryDate" required>
+                <label for="cvv">CVV:</label>   
+                <input type="password" id="cvv" name="cvv" placeholder="CVV" required pattern="[0-9]{3,4}">
+
+            </fieldset>
+
+             <fieldset>
+                <legend> Agreements </legend>
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the terms and conditions.
+                </label>
+
+                <label for="files"> Files:</label>
+                <input type="file" id="files" name="files" multiple>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>
