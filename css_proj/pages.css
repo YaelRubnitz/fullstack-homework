@@ -1,0 +1,99 @@
+/* 
+
+.profile-card{
+    width: 400px;
+    margin: 150px auto;
+    background-color: #d75959;
+    border-radius: 10px;
+    border: 1px solid #932020;
+    padding: 30px;
+}
+.profile-card h1{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+.profile-card h2{
+    font-size: 1.1rem;
+    color: rgb(109, 98, 98);
+    text-align: center;
+}
+
+p{
+    font-size: 1rem;
+    color: rgb(25, 24, 24);
+    text-align: center;
+}
+
+*/
+/* 
+.profile-card a{
+    width: 180px;        
+    margin: 20px auto;   
+    color: rgb(253, 250, 250);
+    background-color: rgb(199, 161, 161);
+    padding: 10px;
+    display: block;      
+    text-align: center;   
+} 
+ */
+
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-card {
+    /* שימוש ב־vw: התיבה תתפוס תמיד 30% מרוחב המסך. כשהמסך קטן היא תקטן ממש בפרופורציה! */
+    width: 30vw;
+    
+    /* קביעת רוחב מינימלי כדי שלא תהיה קטנה מדי במסכים צרים מאוד */
+    min-width: 280px; 
+    
+    margin: 10vh auto; 
+    background-color: #d75959;
+    border-radius: 10px;
+    border: 1px solid #932020;
+    
+    padding: 2rem; 
+    text-align: center;
+}
+
+.profile-card h1 {
+    /* שימוש ביחידת em או rem כך שהטקסט יקטן ויגדל יחד עם גודל המסך או התיבה אם צריך */
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.profile-card h2 {
+    font-size: 1.2rem;
+    color: rgb(109, 98, 98);
+    margin-bottom: 1rem;
+}
+
+.profile-card p {
+    font-size: 1rem;
+    color: rgb(25, 24, 24);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.profile-card a {
+    width: 60%; 
+    margin: 0 auto;
+    color: rgb(253, 250, 250);
+    background-color: rgb(164, 87, 87);
+    padding: 0.8rem 1rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
