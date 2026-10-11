@@ -1,0 +1,117 @@
+body {
+    font-family: 'Heebo','Assistant',Arial, sans-serif;
+    line-height: 1.6;
+    height: 1000px;
+    background-color: #92bb82; 
+    font-family: "Amatic SC", sans-serif;
+    font-size: 2rem; 
+    text-align: center; 
+    }
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+h1 {
+    margin-bottom: 10px;
+    margin-top: 10%;
+    font-size: 4.5rem;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+div, form {
+    margin-bottom: 25px;      /* יוצר רווח מסודר בין הקישור לטופס */
+}
+
+
+header {
+    background: rgb(89, 120, 80); /* ירוק כהה בשקיפות של 40% שיתמזג עם הבז' */
+    padding:2px 20px;
+    height: 35px; /* הגדלתי קצת את הגובה כי 25px עלול להיות צפוף מדי לטקסט או ללוגו */
+    border-radius: 25px; /* פינות מעוגלות */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+   height: 80%;
+    width: auto; 
+    float: right;
+    display: block;
+    margin: 0 auto;
+}
+
+/* עיצוב לשדה הקלט (האינפוט) */
+input[type="password"],  textarea ,select {
+    background-color: rgba(255, 255, 255, 0.4); /* רקע לבן שקוף למחצה */
+    border: 1px solid rgba(255, 255, 255, 0.7); /* מסגרת עדינה ושקופה */
+    border-radius: 25px; /* פינות מעוגלות מאוד */
+    padding: 4px 13px; /* רווח פנימי בתוך האינפוט */
+    font-family: "Amatic SC", sans-serif;
+    font-size: 20px;
+    outline: none; /* ביטול המסגרת המכוערת של הדפדפן בלחיצה */
+    transition: all 0.3s ease; /* מעבר חלק כשלוחצים עליו */
+}
+
+/* אפקט כשהמשתמש לוחץ על האינפוט */
+input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 0.7); /* נעשה מעט יותר אטום בלחיצה */
+    border-color: #b59f84; /* מסגרת בגוון כהה יותר שמתאים לבז' */
+}
+
+/* עיצוב לכפתורים */
+button, a.btn {
+    background-color: rgba(255, 255, 255, 0.3); /* רקע שקוף */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 25px; /* פינות מעוגלות */
+    padding: 4px 13px; /* רווח פנימי */
+    font-family: "Amatic SC", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* אפקט מעבר עכבר (Hover) לכפתורים */
+button:hover, a.btn:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* מתבהר כשעוברים עליו */
+    transform: translateY(-2px); /* זזה קצת כלפי מעלה בקלילות */
+}
+
+a {
+    color: #333; /* צבע קישורים */
+    transition: color 0.3s ease; /* מעבר חלק בצבע */
+}
+
+form {
+    display: inline-block; /* הופך את הטופס לרוחב התוכן שלו */
+    margin: 0 auto;        /* ממרכז את הטופס עצמו במסך */
+    margin-bottom: 25px;
+}
+
+label {
+    vertical-align: top;   /* מיישר את הטקסט של הלייבל לחלק העליון */
+    display: inline-block;
+    margin-left: 8px;      /* רווח קטן בין המילה "תלונה:" לתיבה */
+}
+
+textarea {
+    vertical-align: top;   /* מוודא שגם התיבה מיושרת למעלה */
+}
+
+select, textarea {
+    width: 300px; /* רוחב אחיד ששניהם יישרו קו */
+}
+
+textarea {
+    margin-top: 10px; /* רווח קטן מעל התיבה הנפתחת */
+}
+
+.btn {
+    font-size:small; ;
+}

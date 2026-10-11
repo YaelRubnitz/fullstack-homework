@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="pic/logo.png" alt="" id="logo">
+    </header>
+
+    <main>
+        <a href="index.html" class="btn">חזרה לדף הבית</a>
+        <h1>שליחת תלונה אנונימית</h1>
+
+        <form>
+            <select id="category" name="category">
+                <option value="">בחר קטגוריה</option>
+                <option value="אוכל"> אוכל</option>
+                <option value="ציוד">ציוד</option>
+                <option value="פקודות">פקודות</option>
+                <option value="אחר">אחר</option>
+            </select>
+            <div>
+                <label for="complaint">תלונה:</label>
+                <textarea id="complaint" name="complaint" rows="4" cols="50" placeholder="הכנס את התלונה שלך כאן"></textarea>
+            </div>
+
+            <button type="submit">שלח תלונה</button>
+        </form>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* Global reset and font (inherited) */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Header (Reused from index) */
+header {
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.logo img {
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.center-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 36px;
+}
+
+.center-nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.center-nav a.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.right-actions {
+    float: right;
+}
+
+.right-actions button {
+    border: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.btn-login {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-signup {
+    background: transparent;
+}
+
+.btn-help {
+    background: transparent;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    color: #555;
+}
