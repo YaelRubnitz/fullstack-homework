@@ -1,7 +1,7 @@
 .images-main {
     width: 100%;
     min-height: calc(100% - 70px);
-    background: linear-gradient(to right, #f8f1fd 0%, #ffffff 50%, #fff4e8 100%);
+    background: linear-gradient(to right, #c9b9d4 0%, #eddbdb 50%, #dec8b0 100%);
 }
 
 /* מיכל מרכזי צר וממורכז יותר */
@@ -16,12 +16,14 @@
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 35px;
-    margin-left: 10px;
+    margin-left: 10%;
 }
 
 .gallery-section {
-    margin-bottom: 50px;
+    margin-bottom: 37px;
     position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .gallery-section h3 {
@@ -70,11 +72,11 @@
 }
 
 .image-item img {
-    width: 100%;
-    height: 140px;
+       width: 91%;
+    height: 183px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
 }
 
 .image-item p {
@@ -95,10 +97,9 @@
 }
 
 .discovery-card {
-    float: left;
-    width: 32%; /* רוחב מותאם בדיוק ל-3 פריטים בשורה */
-    margin-right: 2%; /* מרווח קטן בין הכרטיסים */
-    margin-bottom: 15px; /* מרווח בין השורות */
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
     box-sizing: border-box;
     padding: 12px 15px;
     text-decoration: none;

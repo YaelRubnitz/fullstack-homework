@@ -27,9 +27,9 @@ h1 {
 .prompt-form {
     background-color: #fff;
     border: 1px solid #e0e0e0;
-    border-radius: 15px;
+    border-radius: 40px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     text-align: left;
 }
 
@@ -59,9 +59,18 @@ h1 {
     color: #666;
     cursor: pointer;
     padding: 5px 15px;
-    margin-right: 10px;
+    margin-right: 7px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 10px;
+}
+
+.action-item.right {
+    float: right;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: #e5e4e4; 
+    color: #222;
+    font-weight: 600;
 }
 
 .action-item:hover {

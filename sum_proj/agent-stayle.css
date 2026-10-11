@@ -17,12 +17,13 @@
 /* Text Block - Vertically Centered on the left */
 .text-block {
     float: left;
-    width: 45%;
+    width: 34%;
     box-sizing: border-box;
     padding: 0 40px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    left: 12%;
 }
 
 .text-block h1 {
@@ -33,7 +34,7 @@
 }
 
 .text-block p {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.6;
     color: #444;
     margin-bottom: 15px;
@@ -64,13 +65,13 @@
 /* Illustration Area - Blue-background container on the right */
 .illustration-area {
     float: right;
-    width: 50%;
-    height: 80%;
-    background: linear-gradient(135deg, #a5cbfd 0%, #7db2fe 50%, #5698fa 100%);
+    width: 42%;
+    height: 72%;
+    background: linear-gradient(135deg, #e4b7e6 0%, #3c6baf 50%, #4f6991 100%);
     border-radius: 24px;
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: 12%;
     transform: translateY(-50%);
     box-sizing: border-box;
 }
