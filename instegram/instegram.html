@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בלוג פוסטים</title>
+    
+    <!-- ייבוא 3 הפונטים מגוגל פונטס -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="blog-container">
+        <h1>הבלוג שלי</h1>
+        
+        <section class="posts-grid">
+            
+            <!-- כרטיס 1: מקבל את Amatic SC -->
+            <article class="post-card font-one">
+                <h2>מבוא לפיתוח מערכות</h2>
+                <p>עולם מערכות המחשב Low-level הוא מרתק ומאתגר. הוא דורש הבנה עמוקה של חומרה, זיכרון ותהליכי עבודה במערכות הפעלה.</p>
+                <div class="card-controls">
+                    <label><input type="checkbox" class="dark-mode-toggle"> מצב כהה</label>
+                    <button class="delete-btn">מחיקה</button>
+                </div>
+            </article>
+
+            <!-- כרטיס 2: מקבל את Rubik Glitch -->
+            <article class="post-card font-two">
+                <h2>ארכיטקטורת מעבדים</h2>
+                <p>תכנון מעבד יחיד (Single-cycle CPU) ב-Verilog פותח צוהר להבנה בסיסית של אופן פעולת המעבד והאלגוריתמים.</p>
+                <div class="card-controls">
+                    <label><input type="checkbox" class="dark-mode-toggle"> מצב כהה</label>
+                    <button class="delete-btn">מחיקה</button>
+                </div>
+            </article>
+
+            <!-- כרטיס 3: מקבל את Rubik Doodle Shadow -->
+            <article class="post-card font-three">
+                <h2>רשתות תקשורת ואבטחה</h2>
+                <p>אבטחת מידע ותקשורת מחשבים הם עמוד השדרה של יישומים מודרניים. יישום פרוטוקולים והצפנות מאפשר הגנה על מידע.</p>
+                <div class="card-controls">
+                    <label><input type="checkbox" class="dark-mode-toggle"> מצב כהה</label>
+                    <button class="delete-btn">מחיקה</button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
