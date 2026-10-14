@@ -1,7 +1,7 @@
 /* עיצוב בסיסי לכל הכרטיסים */
 body {
     font-family: sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(to right, #cab4db 0%, #d8d0db 50%, #74abca 100%);
     margin: 0;
     padding: 20px;
 }
@@ -46,11 +46,11 @@ body {
 }
 
 p::first-line{
-    color: rgb(159, 155, 226);
+    color: rgb(118 174 228);
 }
 
 p::first-letter{
-    color: rgb(154, 70, 233);
+    color: rgb(107 44 166);
 }
 
 .delete-btn:hover{
@@ -60,10 +60,11 @@ p::first-letter{
 .delete-btn{
     border-radius: 10px;
     border: none;
+    margin-right: 10px;
 }
 
 .post-card:has(.dark-mode-toggle:checked) {
-    background-color: #222222;
+    background-color: #1c0e7a;
     color: #ffffff;            
 }
 
