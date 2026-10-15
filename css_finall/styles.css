@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 1. HEADER */
+.site-header {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    border-radius: 10px;
+    padding: 5px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-center h1 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #66fcf1;
+}
+
+.status-pill {
+    background-color: rgba(129, 234, 241, 0.2);
+    border: 1px solid #1f2233;
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.green-dot {
+    background-color: #45f3ff;
+    box-shadow: 0 0 8px #45f3ff;
+}
+
+/* 2. MAIN DASHBOARD BOX (Radar + Stats) */
+.main-dashboard-box {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.radar-container {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #45f3ff;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle, rgba(69, 243, 255, 0.1) 0%, rgba(11, 12, 16, 0.8) 70%);
+    box-shadow: inset 0 0 15px rgba(69, 243, 255, 0.3);
+}
+
+/* .radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(45deg, rgba(69,243,255,0.5) 0%, transparent 70%);
+    transform-origin: top left;
+} */
+
+.blip {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #45f3ff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #45f3ff;
+}
+
+.blip-1 { top: 40px; left: 120px; }
+.blip-2 { top: 110px; left: 50px; }
+.blip-3 { top: 90px; left: 140px; }
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.stat-item .stat-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #45f3ff;
+    display: block;
+}
+
+.stat-item .stat-label {
+    font-size: 0.85rem;
+    color: #8c8f94;
+    letter-spacing: 1px;
+}
+
+/* 3. ACTION BUTTONS ROW */
+.actions-row {
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    color: #c5c6c7;
+    padding: 4px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* 4. CARDS GRID */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.intel-card {
+    background-color: #12131c;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-left: 4px solid transparent; /* כאן נגדיר את צבעי הגבולות משמאל/ימין לפי התמונה */
+}
+
+.intel-card.critical-border { border-left-color: #ff3366; }
+.intel-card.high-border { border-left-color: #ffb703; }
+.intel-card.medium-border { border-left-color: #45f3ff; }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.badge.critical { background-color: rgba(255, 51, 102, 0.2); color: #ff3366; }
+.badge.high { background-color: rgba(255, 183, 3, 0.2); color: #ffb703; }
+.badge.medium { background-color: rgba(69, 243, 255, 0.2); color: #45f3ff; }
+
+.card-status {
+    color: #8c8f94;
+}
+
+.intel-card h3 {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* מעטפת שמאגדת את הפס ואת האחוזים שצמודים אליו בשורה */
+.card-progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* פס ההתקדמות עצמו יתפוס את כל הרוחב הפנוי */
+.progress-bar-container {
+    flex-grow: 1; /* גורם לפס למלא את רוב השטח */
+    background-color: #0b0c10;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden; /* שומר שהפס הירוק/תכלת לא יחרוג מהגבולות העגולים */
+}
+
+.progress-bar {
+    background-color: #45f3ff;
+    height: 100%;
+    border-radius: 3px;
+}
+
+/* עיצוב הטקסט של האחוזים מצד ימין לפס */
+.progress-text {
+    font-size: 0.75rem;
+    color: #8c8f94;
+    min-width: 30px;
+    text-align: left;
+}
+
+/* 5. THREAT DETECTED BANNER */
+.threat-banner {
+    background-color: rgba(255, 51, 102, 0.1);
+    border: 1px solid #ff3366;
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.red-dot {
+    background-color: #ff3366;
+    box-shadow: 0 0 10px #ff3366;
+}
+
+.threat-text {
+    color: #ff3366;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* 6. BOTTOM NAVIGATION */
+.bottom-nav {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    margin-top: 6vh;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: #8c8f94;
+}
+
+.nav-item.active {
+    color: #45f3ff;
+}
+
+
+
+
+
+

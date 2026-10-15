@@ -43,7 +43,7 @@
                     <span class="stat-label">ACTIVE SIGNALS</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number alert-num">07</span>
+                    <span class="stat-number">07</span>
                     <span class="stat-label">PRIORITY ALERTS</span>
                 </div>
             </div>
@@ -59,14 +59,19 @@
         <!-- 4. CARDS ROW -->
         <section class="cards-grid">
             <!-- Card 1: Critical -->
+            
             <div class="intel-card critical-border">
                 <div class="card-header">
                     <span class="badge critical">CRITICAL</span>
                     <span class="card-status">In Progress</span>
                 </div>
                 <h3>Operation Nightfall</h3>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" style="width: 65%;"></div>
+                
+                <!-- החלק התחתון של הפס והאחוזים -->
+                <div class="card-progress-wrapper">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
                     <span class="progress-text">65%</span>
                 </div>
             </div>
@@ -78,8 +83,11 @@
                     <span class="card-status">Analyzing</span>
                 </div>
                 <h3>Signal Intercept Alpha</h3>
-                <div class="progress-bar-container">
+
+                <div class="card-progress-wrapper">
+                    <div class="progress-bar-container">
                     <div class="progress-bar" style="width: 40%;"></div>
+                </div>
                     <span class="progress-text">40%</span>
                 </div>
             </div>
@@ -91,8 +99,10 @@
                     <span class="card-status">Pending</span>
                 </div>
                 <h3>Asset Recovery</h3>
-                <div class="progress-bar-container">
+                <div class="card-progress-wrapper">
+                    <div class="progress-bar-container">
                     <div class="progress-bar" style="width: 15%;"></div>
+                    </div>
                     <span class="progress-text">15%</span>
                 </div>
             </div>
@@ -104,8 +114,10 @@
                     <span class="card-status">Active</span>
                 </div>
                 <h3>Cyber Defense Grid</h3>
-                <div class="progress-bar-container">
+                <div class="card-progress-wrapper">
+                    <div class="progress-bar-container">
                     <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
                     <span class="progress-text">80%</span>
                 </div>
             </div>
@@ -123,11 +135,11 @@
                 <span class="nav-icon">📊</span>
                 <span>Dashboard</span>
             </div>
-            <div class="nav-item">
+            <div class="nav-item active">
                 <span class="nav-icon">📡</span>
                 <span>Feed</span>
             </div>
-            <div class="nav-item">
+            <div class="nav-item active">
                 <span class="nav-icon">📄</span>
                 <span>Brief</span>
             </div>
