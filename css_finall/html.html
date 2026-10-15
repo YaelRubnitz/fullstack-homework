@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="he" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGINT OPS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- 1. HEADER -->
+        <header class="site-header">
+            <div class="header-left">
+                <span class="shield-icon">🛡️</span>
+            </div>
+            <div class="header-center">
+                <h1>SIGINT OPS</h1>
+            </div>
+            <div class="header-right">
+                <div class="status-pill">
+                    <span class="dot green-dot"></span>
+                    <span>SECURE - ONLINE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. MAIN DASHBOARD BOX (Radar + Stats) -->
+        <section class="main-dashboard-box">
+            <div class="radar-container">
+                <!-- את הסורק נשלים או ניבא לכאן בהמשך -->
+                <div class="radar-circle">
+                    <div class="radar-sweep"></div>
+                    <div class="blip blip-1"></div>
+                    <div class="blip blip-2"></div>
+                    <div class="blip blip-3"></div>
+                </div>
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">ACTIVE SIGNALS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number alert-num">07</span>
+                    <span class="stat-label">PRIORITY ALERTS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ACTION BUTTONS ROW -->
+        <div class="actions-row">
+            <button class="action-btn">⚡ New Brief</button>
+            <button class="action-btn">&lt;&gt; Decode</button>
+            <button class="action-btn">✈️ Request Drone</button>
+        </div>
+
+        <!-- 4. CARDS ROW -->
+        <section class="cards-grid">
+            <!-- Card 1: Critical -->
+            <div class="intel-card critical-border">
+                <div class="card-header">
+                    <span class="badge critical">CRITICAL</span>
+                    <span class="card-status">In Progress</span>
+                </div>
+                <h3>Operation Nightfall</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 65%;"></div>
+                    <span class="progress-text">65%</span>
+                </div>
+            </div>
+
+            <!-- Card 2: High -->
+            <div class="intel-card high-border">
+                <div class="card-header">
+                    <span class="badge high">HIGH</span>
+                    <span class="card-status">Analyzing</span>
+                </div>
+                <h3>Signal Intercept Alpha</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 40%;"></div>
+                    <span class="progress-text">40%</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Medium -->
+            <div class="intel-card medium-border">
+                <div class="card-header">
+                    <span class="badge medium">MEDIUM</span>
+                    <span class="card-status">Pending</span>
+                </div>
+                <h3>Asset Recovery</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 15%;"></div>
+                    <span class="progress-text">15%</span>
+                </div>
+            </div>
+
+            <!-- Card 4: High -->
+            <div class="intel-card high-border">
+                <div class="card-header">
+                    <span class="badge high">HIGH</span>
+                    <span class="card-status">Active</span>
+                </div>
+                <h3>Cyber Defense Grid</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                    <span class="progress-text">80%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. THREAT DETECTED BANNER -->
+        <div class="threat-banner">
+            <span class="dot red-dot blinking"></span>
+            <span class="threat-text">THREAT DETECTED</span>
+        </div>
+
+        <!-- 6. BOTTOM NAVIGATION -->
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📡</span>
+                <span>Feed</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📄</span>
+                <span>Brief</span>
+            </div>
+        </nav>
+
+    </div>
+
+</body>
+</html>
