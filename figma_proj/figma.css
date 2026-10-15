@@ -1,0 +1,910 @@
+/* איפוס בסיסי וצבעי בסיס */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f19; /* רקע כהה עמוק כמו בעיצוב */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   הדר (Navigation Header)
+   ========================================== */
+.site-header {
+    width: 100%;
+    padding: 1.5rem 5%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* דוחף את הלוגו לשקופית אחת ואת הכפתורים לשנייה */
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-image {
+    height: 22px; 
+    width: auto;
+}
+
+/* התאמת הקישורים באמצע בדסקטופ */
+.main-navigation {
+    display: block; /* מוצג רגיל בדסקטופ */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #9ca3af; 
+    font-size: 0.9rem; /* הגדלתי מעט שיהיה נוח לקריאה */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.sign-in-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.btn-sign-up {
+    background: transparent;
+    border: 1px solid #10b981; /* מסגרת ירוקה */
+    color: #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px; /* כפתור מעוגל לגמרי כמו בעיצוב */
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-sign-up:hover {
+    background-color: #10b981;
+    color: #0b0f19;
+}
+
+/* ==========================================
+   איזור ראשי (Hero Section - שתי עמודות)
+   ========================================== */
+.site-main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem; /* מרווח יחסי בין הטקסט לתמונת הטלפונים */
+    min-height: 70vh;
+}
+
+/* עמודת טקסט */
+.hero-text-content {
+    /* flex: 1; */
+    max-width: 600px;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.hero-subtitle {
+    color: #3b82f6; /* כחול מואר */
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(1.2rem, 2.5vw, 2.5rem); /* גודל טקסט רספונסיבי שמשתנה אוטומטית לפי המסך! */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.hero-description {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    background-color: #10b981; /* ירוק בולט כמו בכפתור Learn More */
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); /* אפקט זוהר ירוק */
+    transition: transform 0.2s ease;
+}
+
+.btn-learn-more:hover {
+    transform: translateY(-2px);
+}
+
+/* עמודת תמונה (מוק-אפ טלפונים) */
+.hero-visual-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   אזור הכרטיסים (Features Section)
+   ========================================== */
+.features-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 5% 5rem 5%;
+}
+
+/* פריסת גריד יחסית לשתי העמודות */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem; /* מרווח יחסי ואחיד בין הכרטיסים */
+}
+
+/* עיצוב אחיד לכרטיסים */
+.feature-card {
+    background-color: #121826; /* רקע כהה עשיר שיושב מעל הרקע הכללי */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* מסגרת עדינה מאוד */
+    border-radius: 20px; /* פינות מעוגלות תואמות לעיצוב */
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px); /* אפקט ריחוף עדין ומודרני */
+}
+
+/* עיצוב האייקון שבתוך הכרטיס */
+.feature-icon-wrapper {
+    margin-bottom: 2rem;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+}
+
+.purple-icon {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.blue-icon {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* כותרות ופסקאות בתוך הכרטיסים */
+.feature-card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+}
+
+.feature-card p {
+    color: #9ca3af;
+    font-size: 0.7rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+/* קישור Learn More עם החץ */
+.learn-more-link {
+    text-decoration: none;
+    color: #3b82f6; /* צבע כחול תואם לקישורים */
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.learn-more-link:hover {
+    color: #60a5fa;
+}
+
+.learn-more-link span {
+    transition: transform 0.2s ease;
+}
+
+.learn-more-link:hover span {
+    transform: translateX(4px); /* החץ זז קצת ימינה בריחוף */
+}
+/* ==========================================
+   ססקשן What makes us different - חיבור מושלם של שני החצאים
+   ========================================== */
+.difference-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+
+.left-image img{
+    width: 100%;
+}
+
+#corner{
+    width: 40%;
+    float: right;
+}
+.right-image img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.left-image {
+    width: 50%;
+}
+.right-image {
+    width: 50%;
+
+}
+
+/* הצד הימני (הכרטיס הלבן עם הטקסט) */
+.difference-content-card {
+    flex: 1;
+    background-color: #ffffff;
+    color: #0b0f19;
+    padding: 3.5rem 3rem;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* התאמת הפינות המעוגלות בהתאם לעיצוב המקורי */
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.difference-content-card h2 {
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    font-weight: 800;
+    color: #0b0f19;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.diff-subtitle {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #111827;
+    margin-bottom: 1.2rem;
+}
+
+.diff-text {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+/* ==========================================
+   ססקשן Presale והרקע השחור עם תמונת Middle
+   ========================================== */
+.presale-section {
+    width: 100%;
+    background-color: #0b0f19; /* רקע שחור עמוק תואם לשאר האתר */
+    position: relative;
+    overflow: hidden;
+}
+
+.presale-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* מיקום ותצוגת תמונת ה-Middle */
+.middle-image-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.middle-image {
+    width: 112%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* אזור התוכן שיושב בתוך החלק הזה */
+.presale-content-area {
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem 5%;
+    /* בהמשך נוסיף לכאן את הגריד של הכרטיסים */
+}
+
+
+/* ==========================================
+   ססקשן Roadmap (Q1 - Q4)
+   ========================================== */
+.roadmap-section {
+    width: 100%;
+    padding: 3rem 5% 5rem 5%;
+}
+
+.roadmap-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap; /* שומר על רספונסיביות ויורד שורה במסכים צרים */
+}
+
+.roadmap-card {
+    flex: 1;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* החלק העליון של כל כרטיס (הטיפה והשנה) */
+.roadmap-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* מעטפת הטיפה - משמשת עוגן למיקום הטקסט */
+.drop-wrapper {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-icon {
+    width: 65px;
+    height: auto;
+    display: block;
+}
+
+/* הטקסט שיושב במרכז הטיפה */
+.drop-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0f0f0f;
+    font-size: 1.1rem;
+    font-weight: 700;
+    pointer-events: none; /* מונע סימון טקסט בטעות כשלוחצים */
+}
+
+.roadmap-header .year {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* עיצוב רשימת הנקודות */
+.roadmap-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0;
+}
+
+.roadmap-list li {
+    color: #9ca3af; /* אפור בהיר רגוע לטקסט */
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    line-height: 1.4;
+}
+
+/* המספרים הקטנים בצבעים התואמים ברשימה */
+.roadmap-list li span {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* התאמת צבע המספרים לפי הקוביות בתמונה */
+.roadmap-card:nth-child(1) .roadmap-list li span { color: #10b981; /* ירוק */ }
+.roadmap-card:nth-child(2) .roadmap-list li span { color: #3b82f6; /* כחול */ }
+.roadmap-card:nth-child(3) .roadmap-list li span { color: #facc15; /* צהוב */ }
+.roadmap-card:nth-child(4) .roadmap-list li span { color: #ef4444; /* אדום */ }
+
+
+.tokner-coming-placeholder{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20vh;
+}
+
+.tokner-coming-placeholder img{
+    width: 50%;
+}
+
+.text-near-hend img{
+     width: 100%;
+
+}
+
+.text-near-hend{
+    margin-left: 7%;
+    width: 40%;
+}
+
+.text-near-hend button{
+    width:30%;
+    font-size: 10px;
+    margin-top: 10px;
+    
+}
+
+/* ==========================================
+   Presale Section - תמונה ב-HTML עם תוכן מעליה
+   ========================================== */
+.presale-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* התמונה הבסיסית שיושבת ברקע */
+.presale-bg-img {
+    width: 112%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* השכבה שיושבת בדיוק מעל התמונה */
+.presale-overlay {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.presale-title {
+    color: #ffffff;
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-weight: 800;
+    text-align: center;
+}
+
+/* סידור שלושת הכרטיסים אחד ליד השני */
+.phases-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* עיצוב המלבן הלבן */
+.phase-card {
+    background-color: #ffffff;
+    color: #0b0f19;
+    border-radius: 24px;
+    padding: 5.2rem 1.5rem;
+    flex: 1;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    height: 70%;
+}
+
+/* התג המעוגל עם המספר */
+.phase-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.badge-green {
+    background-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.badge-blue {
+    background-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.badge-yellow {
+    background-color: #f59e0b;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.phase-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #111827;
+}
+
+.phase-dates {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.phase-rates {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.rate-main {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #111827;
+}
+
+.rate-sub {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.rate-sub strong {
+    color: #111827;
+}
+
+#down{
+    margin-top: 10px;
+}
+
+/* מוריד את הקופסה הלבנה האמצעית (Phase Two) כלפי מטה */
+.phases-grid .phase-card:nth-child(2) {
+    transform: translateY(3rem);
+}
+
+/* ==========================================
+   How to buy Section
+   ========================================== */
+.how-to-buy-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 4rem auto 2rem auto;
+    padding: 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.steps-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background-color: #121826;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.2rem 1.8rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* דירוג גובה - הכרטיס האמצעי נמוך יותר כמו בעיצוב */
+.step-card-2 {
+    transform: translateY(2rem);
+}
+
+.step-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.step-text {
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* עיגולי החצים בין הכרטיסים */
+.step-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #161e31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.arrow-green {
+    color: #10b981;
+}
+
+.arrow-yellow {
+    color: #facc15;
+
+    
+}
+
+/* ==========================================
+   Footer Section
+   ========================================== */
+.site-footer {
+    width: 100%;
+    margin-top: 5rem;
+    padding: 4rem 5% 3rem 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* קישורי ניווט עליונים בפוטר */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #10b981;
+}
+
+.footer-nav .divider {
+    color: #4b5563;
+    font-size: 0.85rem;
+}
+
+/* שורה תחתונה */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo-img {
+    height: 28px;
+    width: auto;
+}
+
+/* רשתות חברתיות */
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.social-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-circle:hover {
+    background-color: #10b981;
+    color: #0b0f19;
+}
+
+/* זכויות יוצרים */
+.footer-copyright {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.designer-credit {
+    color: #6b7280;
+    text-decoration: underline;
+    font-size: 0.75rem;
+}
+@media screen and (max-width: 730px) {
+
+  .site-header {
+    padding: 1rem 5%;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* מעלים את התפריט האמצעי במסך נייד */
+  .main-navigation {
+    display: none; 
+  }
+
+  .auth-actions {
+    gap: 1rem;
+  }
+
+  .sign-in-link {
+    font-size: 0.85rem;
+  }
+
+  .btn-sign-up {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* שאר הגדרות ה-Hero שסידרנו קודם */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 1rem 5%;
+  }
+
+  .hero-text-content {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .hero-visual-content {
+    order: 2;
+    width: 100%;
+  }
+
+  .phone-mockup-image {
+    max-width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 730px) {
+
+  /* הופך את הסקשן לעמודה אנכית במקום שורות */
+  .difference-section {
+    flex-direction: column;
+  }
+
+  /* התמונה הצבעונית תופסת רוחב מלא למעלה */
+  .left-image {
+    width: 100%;
+  }
+
+  /* החלק הלבן עם הטקסט תופס רוחב מלא ויורד מתחת לתמונה */
+  .right-image {
+    width: 100%;
+  }
+
+  .right-image img{
+    padding-bottom: 3rem;
+
+  } 
+
+  /* מעלים לחלוטין את השפיץ הלבן במובייל לפי העיצוב */
+  #corner {
+    display: none;
+  }
+}

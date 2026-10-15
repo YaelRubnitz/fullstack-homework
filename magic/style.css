@@ -1,0 +1,102 @@
+/* הגדרות בסיס ואיפוס קטן */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* מעטפת ראשית שמרכזת את התוכן */
+.hero-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    width: 50%;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* עיצוב הכרטיס הקלאסי (בלי אנימציות עדיין) */
+.magic-card {
+    width: 220px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    
+    
+    /* הפעלה של שתי האנימציות יחד בשורה אחת (מופרדות בפסיק) */
+    animation: magic-enter 2s ease-out forwards, slideLeftRight 4s ease-in-out infinite alternate 2s;
+    transition: rotate 0.8s linear, background-color 0.8s ease ;
+}
+
+.magic-card:hover{
+    rotate: 360deg;
+    background-color: aqua;
+}
+
+
+.card-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+@keyframes magic-enter {
+    0% {
+        opacity: 0;
+        scale: 0.5; /* הוספנו את המילה transform */
+    }
+    100% {
+        opacity: 1;
+        scale: 1px;; /* הוספנו את המילה transform */
+    }
+}
+
+@keyframes slideLeftRight {
+    0% {
+        translate: 0 0; /* נקודת ההתחלה המקורית */
+    }
+    25% {
+        translae: 100px 0; /* זז קצת ימינה באמצע האנימציה */
+    }
+    75% {
+        translate: -100px 0; /* זז קצת שמאלה בסוף האנימציה */
+    }
+    100%{
+        translate: 0 0;
+    }
+}
