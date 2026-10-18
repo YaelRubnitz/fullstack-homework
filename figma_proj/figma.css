@@ -1,3 +1,4 @@
+
 /* איפוס בסיסי וצבעי בסיס */
 * {
     margin: 0;
@@ -336,11 +337,13 @@ body {
 }
 
 .presale-wrapper {
+    max-width: 1400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-top: 22vh; /* מרווח עליון כדי להפריד מהסקשן הקודם */
 }
 
 /* מיקום ותצוגת תמונת ה-Middle */
@@ -481,36 +484,30 @@ body {
 }
 
 .text-near-hend{
+    display: flex;
+    flex-direction: column;
     margin-left: 7%;
     width: 40%;
 }
 
 .text-near-hend button{
     width:30%;
-    font-size: 10px;
+    font-size: 0.5rem;
     margin-top: 10px;
     
 }
 
 /* ==========================================
-   Presale Section - תמונה ב-HTML עם תוכן מעליה
-   ========================================== */
-.presale-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+Presale Section - תמונה ב-HTML עם תוכן מעליה
+========================================== */
+
 
 /* התמונה הבסיסית שיושבת ברקע */
 .presale-bg-img {
     width: 112%;
+    min-height: 450px;
     height: auto;
     display: block;
-    object-fit: contain;
 }
 
 /* השכבה שיושבת בדיוק מעל התמונה */
@@ -547,9 +544,10 @@ body {
     background-color: #ffffff;
     color: #0b0f19;
     border-radius: 24px;
-    padding: 5.2rem 1.5rem;
-    flex: 1;
+    padding: 1.2rem 2.5rem;
     max-width: 320px;
+    max-height: 230px;
+    min-width: 210px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -557,6 +555,8 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     height: 70%;
 }
+
+
 
 /* התג המעוגל עם המספר */
 .phase-badge {
@@ -883,17 +883,17 @@ body {
 
 @media screen and (max-width: 730px) {
 
-  /* הופך את הסקשן לעמודה אנכית במקום שורות */
+  
   .difference-section {
     flex-direction: column;
   }
 
-  /* התמונה הצבעונית תופסת רוחב מלא למעלה */
+  
   .left-image {
     width: 100%;
   }
 
-  /* החלק הלבן עם הטקסט תופס רוחב מלא ויורד מתחת לתמונה */
+ 
   .right-image {
     width: 100%;
   }
@@ -903,8 +903,81 @@ body {
 
   } 
 
-  /* מעלים לחלוטין את השפיץ הלבן במובייל לפי העיצוב */
+ 
   #corner {
     display: none;
   }
+
+}
+
+@media screen and (max-width: 730px) {
+    .tokner-coming-placeholder {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    .text-near-hend {
+        order:2;
+        margin-left: 0;
+        width: 90%;
+        align-items: start;
+    }
+    .tokner-coming-placeholder img{
+        width: 90%;
+        order: 1;
+    }
+
+    .text-near-hend button{
+        width: 50%;
+        font-size: 0.7rem;
+        border:none;
+        color: #189c18;
+        order:2;
+    }
+
+}
+
+
+@media screen and (max-width: 730px) {
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0; 
+    }
+    
+    .step-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .step-card-2 {
+        transform: translateY(0); 
+    }
+
+    .step-arrow {
+        position: relative;
+        z-index: 2; 
+        margin-top: -10px; 
+        margin-bottom: -22px;
+        transform: rotate(90deg); 
+    }
+}
+    
+
+@media screen and (max-width: 730px) {
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 5%;
+    }
+    .footer-nav{
+        display: none;
+    }
+    .site-footer{
+        padding: 0rem 20% 1rem 5%;
+    }
+
 }
