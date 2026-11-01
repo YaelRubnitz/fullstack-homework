@@ -4,7 +4,7 @@ export function greetUser(name) {
     if (users.includes(name)) {
         console.log(`Welcome back, ${name}!`);
     } else {
-        console.log(`Welcome, ${name}!`);   
+        console.log(`Welcome, ${name}!`); 
+        users.push(name);  
     }
-    users.push(name);
 }
