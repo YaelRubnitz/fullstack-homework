@@ -57,7 +57,7 @@ SELECT name, abilities FROM pokemon WHERE abilities LIKE '%Solar Power%';
 SELECT * FROM pokemon WHERE female_rate > 0.2 ORDER BY name DESC;
 
 2.3 - Present the name, primary color and speed columns for Pokemons whose primary color is green or red, and their Name starts with the letter "C". Order them by their speed
-SELECT name, primary_color, speed FROM pokemon WHERE (primary_color = 'green' OR primary_color = 'red') AND name LIKE 'C%' ORDER BY speed;
+SELECT name, primary_color, speed FROM pokemon WHERE (primary_color IN ('green' , 'red')) AND name LIKE 'C%' ORDER BY speed;
 
 2.4 - Present the name, shape, height and weight of Pokemons whose shape is wings, and height is above 10. Order them by their weight
 SELECT name, shape, height, weight FROM pokemon WHERE shape = 'wings' AND height > 10 O
