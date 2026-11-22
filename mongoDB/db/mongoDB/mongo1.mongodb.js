@@ -146,20 +146,20 @@ db.restaurants.find(
 
 // Exercise 22
 db.restaurants.find(
-  {
+  {grades:{$elemMatch : {
     "grades.date": ISODate("2014-08-11T00:00:00Z"),
     "grades.grade": "A",
     "grades.score": 11
-  },
+  }}},
   { _id: 0, restaurant_id: 1, name: 1, grades: 1 }
 );
 
 // Exercise 23
 db.restaurants.find(
-  {
-    "grades.1.date": ISODate("2014-08-11T00:00:00Z"),
-    "grades.1.grade": "A",
-    "grades.1.score": 9
+    {"grades.1":{
+    "date": ISODate("2014-08-11T00:00:00Z"),
+    "grade": "A",
+    "score": 9}
   },
   { _id: 0, restaurant_id: 1, name: 1, grades: 1 }
 );

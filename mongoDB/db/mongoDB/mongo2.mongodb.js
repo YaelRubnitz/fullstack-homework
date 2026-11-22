@@ -53,24 +53,12 @@ db.restaurants.aggregate([
 // Exercise 5
 db.restaurants.aggregate([
   {
-    $unwind: "$grades"
-  },
-  {
-    $group: {
-      _id: {
-        restaurant_id: "$restaurant_id",
-        name: "$name",
-        borough: "$borough"
-      },
-      avgScore: { $avg: "$grades.score" }
-    }
-  },
-  {
     $project: {
       _id: 0,
-      borough: "$_id.borough",
-      name: "$_id.name",
-      avgScore: 1
+      restaurant_id: 1,
+      name: 1,
+      borough: 1,
+      avgScore: { $avg: "$grades.score" }
     }
   }
 ]);
@@ -94,26 +82,12 @@ db.restaurants.aggregate([
 // Exercise 7
 db.restaurants.aggregate([
   {
-    $unwind: "$grades"
-  },
-  {
-    $group: {
-      _id: {
-        restaurant_id: "$restaurant_id",
-        name: "$name"
-      },
+    $project: {
+      _id: 0,
+      restaurant_id: 1,
+      name: 1,
       minScore: { $min: "$grades.score" },
       maxScore: { $max: "$grades.score" }
     }
-  },
-  {
-    $project: {
-      _id: 0,
-      restaurant_id: "$_id.restaurant_id",
-      name: "$_id.name",
-      minScore: 1,
-      maxScore: 1
-    }
   }
 ]);
-
