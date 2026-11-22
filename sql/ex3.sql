@@ -51,7 +51,7 @@ WHERE order_weekday = 'monday';
 
 
 -- Exercise 3: City with the largest total sales amount (city, sales amount, state)
-SELECT TOP 1 state, city, SUM(sales) AS total_sales
+SELECT TOP 1 with ties state, city, SUM(sales) AS total_sales
 FROM [dbo].[DsOne_orders]
 GROUP BY state, city
 ORDER BY total_sales DESC;

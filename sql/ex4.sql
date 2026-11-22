@@ -25,8 +25,8 @@ FROM [dbo].[Olympic];
 -- Exercise 2: Average height for each sex + overall average height
 -- Analytic:
 SELECT *, 
-       AVG(height) OVER(PARTITION BY sex) AS avg_by_sex,  
-       AVG(height) OVER() AS general_avg 
+    AVG(height) OVER(PARTITION BY sex) AS avg_by_sex,  
+    AVG(height) OVER() AS general_avg 
 FROM [dbo].[Olympic];
 
 
@@ -50,20 +50,20 @@ HAVING MIN(year) > 2000;
 -- Analytic:
 WITH FirstParticipation AS (
     SELECT noc, year, 
-           ROW_NUMBER() OVER(PARTITION BY noc ORDER BY year ASC) AS rn
+        ROW_NUMBER() OVER(PARTITION BY noc ORDER BY year ASC) AS rn
     FROM [dbo].[Olympic]
 )
 SELECT noc, year AS first_year
 FROM FirstParticipation
 WHERE rn = 1 
-  AND year > 2000;
+AND year > 2000;
 
 
 -- Exercise 5: Count the number of Gold medals won by each team and the total amount of gold medals won
 -- Analytic:
 SELECT team, 
-       COUNT(medal) OVER(PARTITION BY team) AS gold_per_team,
-       COUNT(medal) OVER() AS total_gold
+    COUNT(medal) OVER(PARTITION BY team) AS gold_per_team,
+    COUNT(medal) OVER() AS total_gold
 FROM [dbo].[Olympic]
 WHERE medal = 'Gold';
 
@@ -74,8 +74,8 @@ WHERE medal = 'Gold';
 
 -- Exercise 1: Count the number of gold medals won by each participant and the total amount per sex
 SELECT name, sex,
-       COUNT(medal) OVER(PARTITION BY name) AS gold_per_participant,
-       COUNT(medal) OVER(PARTITION BY sex) AS total_gold_per_sex
+    COUNT(medal) OVER(PARTITION BY name) AS gold_per_participant,
+    COUNT(medal) OVER(PARTITION BY sex) AS total_gold_per_sex
 FROM [dbo].[Olympic]
 WHERE medal = 'Gold';
 בוצעו עיבוד וניתוח בקוד
