@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.profile-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Layout: 1 column on small screens, 2 per row on larger screens */
+.profiles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+@media (min-width: 700px) {
+  .profiles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ProfileCard */
+.profile-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 8px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.profile-card .avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.profile-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0 0 6px;
+  color: #111827;
+}
+
+.profile-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+}
+
+/* Reusable Button by person type */
+.profile-btn {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.profile-btn--friend {
+  background-color: #16a34a; /* ירוק - Friend */
+}
+
+.profile-btn--teacher {
+  background-color: #2563eb; /* כחול - Teacher */
+}
+
+.profile-btn--student {
+  background-color: #7c3aed; /* סגול - Student */
+}
+
+.profile-btn:hover {
+  filter: brightness(0.86); /* כהה מעט יותר בריחוף */
+}
+
+.profile-btn:focus,
+.profile-btn:focus-visible {
+  outline: 3px solid #111827;
+  outline-offset: 2px;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-top: 24px;
+  padding: 12px 0;
+}
+
+.site-footer p {
+  margin: 0;
+}
